@@ -8,24 +8,59 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    var mealTimeArray: [String] = []
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Main"
 
-        // Do any additional setup after loading the view.
+        setupTableView()
+        setupNavigationBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 130
     }
-    */
+    
+    func setupNavigationBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+    }
+    
+    
+    @IBAction func addCellButtonTapped(_ sender: UIButton) {
+        mealTimeArray.append("아침")
+        tableView.reloadData()
+    }
+    
+    
+}
 
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mealTimeArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuCell
+        
+        cell.mealTimeLabel.text = mealTimeArray[indexPath.row]
+        
+        return cell
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        
+        detailVC.mealTimeText = mealTimeArray[indexPath.row]
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
