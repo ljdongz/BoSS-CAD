@@ -17,6 +17,14 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         mainLabel.text = mealTimeText
         // Do any additional setup after loading the view.
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(barButtonTapped))
+    }
+    
+    @objc func barButtonTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let searchVC = storyboard.instantiateViewController(withIdentifier: "searchVC") as! SearchViewController
+        navigationController?.pushViewController(searchVC, animated: true)
     }
 
 }
