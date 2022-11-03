@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5743C3632914126D00050C16 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3622914126D00050C16 /* SearchViewController.swift */; };
+		5743C3652914165E00050C16 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3642914165E00050C16 /* SearchListCell.swift */; };
+		5743C367291417AB00050C16 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C366291417AB00050C16 /* FoodData.swift */; };
 		579FC7782912A7020024BBBF /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7772912A7020024BBBF /* MenuCell.swift */; };
 		579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7792912BDCF0024BBBF /* DetailViewController.swift */; };
 		57DB057C290FF218008FFD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB057B290FF218008FFD65 /* AppDelegate.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5743C3622914126D00050C16 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5743C3642914165E00050C16 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
+		5743C366291417AB00050C16 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		579FC7772912A7020024BBBF /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		579FC7792912BDCF0024BBBF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57DB0578290FF218008FFD65 /* BoSS_CAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS_CAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +87,7 @@
 				57DB057F290FF218008FFD65 /* ViewController.swift */,
 				57DB0592290FF386008FFD65 /* MainViewController.swift */,
 				579FC7792912BDCF0024BBBF /* DetailViewController.swift */,
+				5743C3622914126D00050C16 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				579FC7772912A7020024BBBF /* MenuCell.swift */,
+				5743C3642914165E00050C16 /* SearchListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,6 +104,7 @@
 		57DB0591290FF280008FFD65 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5743C366291417AB00050C16 /* FoodData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DB0580290FF218008FFD65 /* ViewController.swift in Sources */,
+				5743C3652914165E00050C16 /* SearchListCell.swift in Sources */,
+				5743C3632914126D00050C16 /* SearchViewController.swift in Sources */,
+				5743C367291417AB00050C16 /* FoodData.swift in Sources */,
 				579FC7782912A7020024BBBF /* MenuCell.swift in Sources */,
 				57DB057C290FF218008FFD65 /* AppDelegate.swift in Sources */,
 				579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */,
