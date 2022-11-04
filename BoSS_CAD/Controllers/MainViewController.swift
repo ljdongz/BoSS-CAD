@@ -39,6 +39,14 @@ class MainViewController: UIViewController {
     }
     
     
+    @IBAction func calcButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let calcAVC = storyboard.instantiateViewController(withIdentifier:
+            "CalcAVC") as! CalcAViewController
+        navigationController?.pushViewController(calcAVC, animated: true)
+    }
+    
+    
 }
 
 extension MainViewController: UITableViewDataSource {
