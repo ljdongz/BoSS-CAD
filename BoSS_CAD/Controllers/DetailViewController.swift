@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var mealTimeText: String?
+    var foodList: [Row] = []
 
     @IBOutlet weak var mainLabel: UILabel!
     
@@ -19,6 +20,11 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(barButtonTapped))
+    }
+    
+    // MARK: - viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        print(foodList)
     }
     
     @objc func barButtonTapped() {
