@@ -44,10 +44,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-SF-iqZ">
-                                <rect key="frame" x="158" y="520" width="75" height="35"/>
+                                <rect key="frame" x="34" y="508" width="324" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="kakao_login_medium_wide"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_medium_wide"/>
+                                <connections>
+                                    <action selector="kakaoLoginButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sg-RJ-6rR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -238,6 +242,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="kakao_login_medium_wide" width="300" height="45"/>
         <image name="scribble" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

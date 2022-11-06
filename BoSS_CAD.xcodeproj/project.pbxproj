@@ -34,6 +34,7 @@
 		B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoSS_CAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.release.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.release.xcconfig"; sourceTree = "<group>"; };
 		C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.debug.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.debug.xcconfig"; sourceTree = "<group>"; };
+		F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 				57DB0584290FF219008FFD65 /* Assets.xcassets */,
 				57DB0586290FF219008FFD65 /* LaunchScreen.storyboard */,
 				57DB0589290FF219008FFD65 /* Info.plist */,
+				F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */,
 			);
 			path = BoSS_CAD;
 			sourceTree = "<group>";
@@ -121,7 +123,6 @@
 				C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */,
 				BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -273,6 +274,7 @@
 /* Begin XCBuildConfiguration section */
 		57DB058A290FF219008FFD65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -333,6 +335,7 @@
 		};
 		57DB058B290FF219008FFD65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
