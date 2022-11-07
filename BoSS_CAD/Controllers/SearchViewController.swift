@@ -21,6 +21,9 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        
+        tableView.register(UINib(nibName: "FoodListCell", bundle: nil), forCellReuseIdentifier: "FoodListCell")
+        tableView.rowHeight = 130
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -100,16 +103,16 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchListCell", for: indexPath) as! SearchListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodListCell", for: indexPath) as! FoodListCell
         
         let foodData = foodDatas[indexPath.row]
         
-        cell.nameLabel.text = foodData.descKor
-        cell.sizeLabel.text = foodData.servingSize
-        cell.kcalLabel.text = foodData.nutrCont1
-        cell.carbohydrateLabel.text = foodData.nutrCont2
-        cell.proteinLabel.text = foodData.nutrCont3
-        cell.fatLabel.text = foodData.nutrCont4
+        cell.nameLabelText.text = foodData.descKor
+        cell.sizeLabelText.text = foodData.servingSize
+        cell.kcalLabelText.text = foodData.nutrCont1
+        cell.carbohydrateLabelText.text = foodData.nutrCont2
+        cell.proteinLabelText.text = foodData.nutrCont3
+        cell.fatLabelText.text = foodData.nutrCont4
         
         return cell
     }
