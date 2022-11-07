@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  BoSS_CAD
+//
+//  Created by SeungHyun Lee on 2022/11/06.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+KAKAO_NATIVE_APP_KEY = e384140bd7d85084ce0843ea07a30e0e
