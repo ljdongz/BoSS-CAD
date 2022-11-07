@@ -135,6 +135,8 @@ extension SearchViewController: UITableViewDelegate {
             let alertOK = UIAlertController(title: "추가되었습니다.", message: nil, preferredStyle: UIAlertController.Style.alert)
             alertOK.addAction(UIAlertAction(title: "확인", style: .default))
             self.present(alertOK, animated: true)
+                                     
+                                     
         }))
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
 
