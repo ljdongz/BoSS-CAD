@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573A456A2918B6FC002A6583 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A45682918B6FC002A6583 /* FoodListCell.swift */; };
+		573A456B2918B6FC002A6583 /* FoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573A45692918B6FC002A6583 /* FoodListCell.xib */; };
 		5743C3632914126D00050C16 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3622914126D00050C16 /* SearchViewController.swift */; };
 		5743C3652914165E00050C16 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3642914165E00050C16 /* SearchListCell.swift */; };
 		5743C367291417AB00050C16 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C366291417AB00050C16 /* FoodData.swift */; };
@@ -19,12 +21,15 @@
 		57DB0585290FF219008FFD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB0584290FF219008FFD65 /* Assets.xcassets */; };
 		57DB0588290FF219008FFD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DB0586290FF219008FFD65 /* LaunchScreen.storyboard */; };
 		57DB0593290FF386008FFD65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB0592290FF386008FFD65 /* MainViewController.swift */; };
+		5F13E3710F542BF5AC3CB4F2 /* Pods_BoSS_CAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */; };
 		BF952C3B2914CFAA009753BA /* CalcBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF952C3A2914CFAA009753BA /* CalcBViewController.swift */; };
 		BF952C3D2914CFB3009753BA /* CalcCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF952C3C2914CFB3009753BA /* CalcCViewController.swift */; };
 		BFEDCBAB2914CDC400778789 /* CalcAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDCBAA2914CDC400778789 /* CalcAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		573A45682918B6FC002A6583 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
+		573A45692918B6FC002A6583 /* FoodListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListCell.xib; sourceTree = "<group>"; };
 		5743C3622914126D00050C16 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5743C3642914165E00050C16 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 		5743C366291417AB00050C16 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
@@ -39,6 +44,10 @@
 		57DB0587290FF219008FFD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57DB0589290FF219008FFD65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57DB0592290FF386008FFD65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoSS_CAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.release.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.release.xcconfig"; sourceTree = "<group>"; };
+		C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.debug.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.debug.xcconfig"; sourceTree = "<group>"; };
+		F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BF952C3A2914CFAA009753BA /* CalcBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBViewController.swift; sourceTree = "<group>"; };
 		BF952C3C2914CFB3009753BA /* CalcCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCViewController.swift; sourceTree = "<group>"; };
 		BFEDCBAA2914CDC400778789 /* CalcAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcAViewController.swift; sourceTree = "<group>"; };
@@ -49,17 +58,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F13E3710F542BF5AC3CB4F2 /* Pods_BoSS_CAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21409970A0B81F63D96AF8D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		57DB056F290FF218008FFD65 = {
 			isa = PBXGroup;
 			children = (
 				57DB057A290FF218008FFD65 /* BoSS_CAD */,
 				57DB0579290FF218008FFD65 /* Products */,
+				7915E7B117151C9C20138210 /* Pods */,
+				21409970A0B81F63D96AF8D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +103,7 @@
 				57DB0584290FF219008FFD65 /* Assets.xcassets */,
 				57DB0586290FF219008FFD65 /* LaunchScreen.storyboard */,
 				57DB0589290FF219008FFD65 /* Info.plist */,
+				F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */,
 			);
 			path = BoSS_CAD;
 			sourceTree = "<group>";
@@ -106,6 +127,8 @@
 			children = (
 				579FC7772912A7020024BBBF /* MenuCell.swift */,
 				5743C3642914165E00050C16 /* SearchListCell.swift */,
+				573A45682918B6FC002A6583 /* FoodListCell.swift */,
+				573A45692918B6FC002A6583 /* FoodListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +141,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7915E7B117151C9C20138210 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */,
+				BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DB058C290FF219008FFD65 /* Build configuration list for PBXNativeTarget "BoSS_CAD" */;
 			buildPhases = (
+				EF4E510663ACEAB7ABDDE682 /* [CP] Check Pods Manifest.lock */,
 				57DB0574290FF218008FFD65 /* Sources */,
 				57DB0575290FF218008FFD65 /* Frameworks */,
 				57DB0576290FF218008FFD65 /* Resources */,
+				4322DA106B3501E74094CAA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DB0588290FF219008FFD65 /* LaunchScreen.storyboard in Resources */,
+				573A456B2918B6FC002A6583 /* FoodListCell.xib in Resources */,
 				57DB0585290FF219008FFD65 /* Assets.xcassets in Resources */,
 				57DB0583290FF218008FFD65 /* Main.storyboard in Resources */,
 			);
@@ -184,12 +219,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4322DA106B3501E74094CAA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF4E510663ACEAB7ABDDE682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoSS_CAD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57DB0574290FF218008FFD65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				57DB0580290FF218008FFD65 /* ViewController.swift in Sources */,
+				573A456A2918B6FC002A6583 /* FoodListCell.swift in Sources */,
 				5743C3652914165E00050C16 /* SearchListCell.swift in Sources */,
 				5743C3632914126D00050C16 /* SearchViewController.swift in Sources */,
 				5743C367291417AB00050C16 /* FoodData.swift in Sources */,
@@ -228,6 +306,7 @@
 /* Begin XCBuildConfiguration section */
 		57DB058A290FF219008FFD65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -288,6 +367,7 @@
 		};
 		57DB058B290FF219008FFD65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -342,6 +422,7 @@
 		};
 		57DB058D290FF219008FFD65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,6 +455,7 @@
 		};
 		57DB058E290FF219008FFD65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
