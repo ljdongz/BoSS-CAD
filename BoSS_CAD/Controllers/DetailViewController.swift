@@ -23,15 +23,19 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(barButtonTapped))
         
         title = mealTimeText!
+        setupTableView()
     }
     
     func setupTableView() {
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "FoodListCell", bundle: nil), forCellReuseIdentifier: "FoodListCell")
+        tableView.rowHeight = 130
     }
     
     // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         print(foodList)
+        tableView.reloadData()
     }
     
     @objc func barButtonTapped() {
@@ -49,8 +53,18 @@ extension DetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodListCell", for: indexPath) as! FoodListCell
         
-        return UITableViewCell()
+        let foodData = foodList[indexPath.row]
+        
+        cell.nameLabelText.text = foodData.descKor
+        cell.sizeLabelText.text = foodData.servingSize
+        cell.kcalLabelText.text = foodData.nutrCont1
+        cell.carbohydrateLabelText.text = foodData.nutrCont2
+        cell.proteinLabelText.text = foodData.nutrCont3
+        cell.fatLabelText.text = foodData.nutrCont4
+        
+        return cell
     }
     
     
