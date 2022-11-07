@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -448,26 +448,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-o2-5pi">
-                                <rect key="frame" x="150" y="147" width="90" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-R8-DWI">
+                                <rect key="frame" x="0.0" y="47" width="390" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gbk-l2-F0k">
+                                        <rect key="frame" x="40" y="20" width="250" height="121"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 칼로리 : 0000 Kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMt-Yo-TSN">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="97o-Zt-ASt"/>
+                                                    <constraint firstAttribute="width" constant="240" id="TtY-pg-a45"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="OVb-X2-2d9">
+                                                <rect key="frame" x="0.0" y="42" width="180" height="79"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 탄수화물 : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-Sp-R8k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="83S-ra-3nD"/>
+                                                            <constraint firstAttribute="width" constant="180" id="KbB-rd-f3n"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 탄수화물 : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-4x-cMO">
+                                                        <rect key="frame" x="0.0" y="27" width="180" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="180" id="GhP-s1-gNr"/>
+                                                            <constraint firstAttribute="height" constant="25" id="Ja7-EB-1iG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 탄수화물 : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0En-YT-IT4">
+                                                        <rect key="frame" x="0.0" y="54" width="180" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="180" id="6Wz-Ef-YY2"/>
+                                                            <constraint firstAttribute="height" constant="25" id="QN7-Qz-wJf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="7iz-R0-s8q"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="aAg-nn-6on"/>
+                                    <constraint firstItem="gbk-l2-F0k" firstAttribute="leading" secondItem="cZt-R8-DWI" secondAttribute="leading" constant="40" id="5x5-4n-3xP"/>
+                                    <constraint firstAttribute="height" constant="150" id="K0A-zb-7sY"/>
+                                    <constraint firstItem="gbk-l2-F0k" firstAttribute="top" secondItem="cZt-R8-DWI" secondAttribute="top" constant="20" id="aFK-MC-Mhe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3wZ-wD-ZgD">
+                                <rect key="frame" x="0.0" y="197" width="390" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wCd-N4-1dE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FQu-o2-5pi" firstAttribute="top" secondItem="wCd-N4-1dE" secondAttribute="top" constant="100" id="WXu-bP-vCp"/>
-                            <constraint firstItem="wCd-N4-1dE" firstAttribute="trailing" secondItem="FQu-o2-5pi" secondAttribute="trailing" constant="150" id="Xvi-dD-nhz"/>
-                            <constraint firstItem="FQu-o2-5pi" firstAttribute="leading" secondItem="wCd-N4-1dE" secondAttribute="leading" constant="150" id="y6K-Ya-SJV"/>
+                            <constraint firstItem="3wZ-wD-ZgD" firstAttribute="leading" secondItem="wCd-N4-1dE" secondAttribute="leading" id="2j3-lK-7hf"/>
+                            <constraint firstItem="3wZ-wD-ZgD" firstAttribute="top" secondItem="cZt-R8-DWI" secondAttribute="bottom" id="I0T-At-QKS"/>
+                            <constraint firstItem="wCd-N4-1dE" firstAttribute="trailing" secondItem="cZt-R8-DWI" secondAttribute="trailing" id="Key-aF-HSg"/>
+                            <constraint firstItem="wCd-N4-1dE" firstAttribute="trailing" secondItem="3wZ-wD-ZgD" secondAttribute="trailing" id="g4f-vW-gBg"/>
+                            <constraint firstItem="cZt-R8-DWI" firstAttribute="leading" secondItem="wCd-N4-1dE" secondAttribute="leading" id="gbl-QE-n70"/>
+                            <constraint firstItem="cZt-R8-DWI" firstAttribute="top" secondItem="wCd-N4-1dE" secondAttribute="top" id="lzD-MR-Vsu"/>
+                            <constraint firstItem="wCd-N4-1dE" firstAttribute="bottom" secondItem="3wZ-wD-ZgD" secondAttribute="bottom" id="z50-6c-K3Q"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainLabel" destination="FQu-o2-5pi" id="KJq-XS-7tC"/>
+                        <outlet property="tableView" destination="3wZ-wD-ZgD" id="AIb-Zs-2Rg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La4-zK-P1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -599,7 +662,7 @@
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="scrollEdgeAppearance">
-                            <offsetWrapper key="titlePositionAdjustment" horizontal="-130" vertical="3"/>
+                            <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -11,15 +11,22 @@ class DetailViewController: UIViewController {
     
     var mealTimeText: String?
     var foodList: [Row] = []
-
-    @IBOutlet weak var mainLabel: UILabel!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainLabel.text = mealTimeText
+        
         // Do any additional setup after loading the view.
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(barButtonTapped))
+        
+        title = mealTimeText!
+    }
+    
+    func setupTableView() {
+        tableView.dataSource = self
     }
     
     // MARK: - viewWillAppear
@@ -33,4 +40,18 @@ class DetailViewController: UIViewController {
         navigationController?.pushViewController(searchVC, animated: true)
     }
 
+}
+
+extension DetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foodList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        return UITableViewCell()
+    }
+    
+    
 }
