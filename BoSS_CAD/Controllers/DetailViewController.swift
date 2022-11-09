@@ -14,7 +14,12 @@ class DetailViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var totalKcal: UILabel!
+    @IBOutlet weak var totalCarbo: UILabel!
+    @IBOutlet weak var totalProtein: UILabel!
+    @IBOutlet weak var totalFat: UILabel!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,16 +31,37 @@ class DetailViewController: UIViewController {
         setupTableView()
     }
     
+    
+    // MARK: - viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        print(foodList)
+        updateTotalInfo()
+        tableView.reloadData()
+    }
+    
     func setupTableView() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "FoodListCell", bundle: nil), forCellReuseIdentifier: "FoodListCell")
         tableView.rowHeight = 130
     }
     
-    // MARK: - viewWillAppear
-    override func viewWillAppear(_ animated: Bool) {
-        print(foodList)
-        tableView.reloadData()
+    func updateTotalInfo() {
+        var sumKcal = 0.0
+        var sumCarbo = 0.0
+        var sumProtein = 0.0
+        var sumFat = 0.0
+        
+        for food in foodList {
+            sumKcal += Double(food.nutrCont1) ?? 0
+            sumCarbo += Double(food.nutrCont2) ?? 0
+            sumProtein += Double(food.nutrCont3) ?? 0
+            sumFat += Double(food.nutrCont4) ?? 0
+        }
+        
+        totalKcal.text = "총 섭취 칼로리 : \(round(sumKcal*10)/10)"
+        totalCarbo.text = "총 섭취 탄수화물 : \(round(sumCarbo*10)/10)"
+        totalProtein.text = "총 섭취 단백질 : \(round(sumProtein*10)/10)"
+        totalFat.text = "총 섭취 지방 : \(round(sumFat*10)/10)"
     }
     
     @objc func barButtonTapped() {
