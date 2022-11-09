@@ -81,7 +81,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU0-2E-TEU">
                                 <rect key="frame" x="0.0" y="91" width="390" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000Kcal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lq-yW-rP6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0Kcal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lq-yW-rP6">
                                         <rect key="frame" x="20" y="25" width="150" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="0WW-Pa-N39"/>
@@ -505,7 +505,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 탄수화물 : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-4x-cMO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 단백질    : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-4x-cMO">
                                                         <rect key="frame" x="0.0" y="27" width="180" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="180" id="GhP-s1-gNr"/>
@@ -515,7 +515,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 탄수화물 : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0En-YT-IT4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 지방       : 0000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0En-YT-IT4">
                                                         <rect key="frame" x="0.0" y="54" width="180" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="180" id="6Wz-Ef-YY2"/>
@@ -569,6 +569,10 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="3wZ-wD-ZgD" id="AIb-Zs-2Rg"/>
+                        <outlet property="totalCarbo" destination="3nK-Sp-R8k" id="WKc-my-SLn"/>
+                        <outlet property="totalFat" destination="0En-YT-IT4" id="ZE1-zJ-ylp"/>
+                        <outlet property="totalKcal" destination="gMt-Yo-TSN" id="cDZ-ae-AAV"/>
+                        <outlet property="totalProtein" destination="OVF-4x-cMO" id="0G9-v5-ZFA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La4-zK-P1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -643,18 +647,22 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-    
         <image name="kakao_login_medium_wide" width="300" height="45"/>
         <image name="scribble" catalog="system" width="128" height="117"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
