@@ -34,7 +34,14 @@ class SearchViewController: UIViewController {
             }
         }
     }
-
+    
+    func checkApiData(data: String) -> String {
+        if data == "" {
+            return "-"
+        } else {
+            return data
+        }
+    }
 }
 
 // MARK: - SearchBarDelegate
@@ -43,7 +50,7 @@ extension SearchViewController: UISearchBarDelegate {
         
         guard let text = searchBar.text else { return }
         
-        var url = "https://openapi.foodsafetykorea.go.kr/api/e59ca6152eff49a681b7/I2790/json/1/10/DESC_KOR=" + text
+        let url = "https://openapi.foodsafetykorea.go.kr/api/e59ca6152eff49a681b7/I2790/json/1/10/DESC_KOR=" + text
         print(url)
         
         let encodedStr = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -107,12 +114,12 @@ extension SearchViewController: UITableViewDataSource {
         
         let foodData = foodDatas[indexPath.row]
         
-        cell.nameLabelText.text = foodData.descKor
-        cell.sizeLabelText.text = foodData.servingSize
-        cell.kcalLabelText.text = foodData.nutrCont1
-        cell.carbohydrateLabelText.text = foodData.nutrCont2
-        cell.proteinLabelText.text = foodData.nutrCont3
-        cell.fatLabelText.text = foodData.nutrCont4
+        cell.nameLabelText.text = checkApiData(data: foodData.descKor)
+        cell.sizeLabelText.text = checkApiData(data: foodData.servingSize)
+        cell.kcalLabelText.text = checkApiData(data: foodData.nutrCont1)
+        cell.carbohydrateLabelText.text = checkApiData(data: foodData.nutrCont2)
+        cell.proteinLabelText.text = checkApiData(data: foodData.nutrCont3)
+        cell.fatLabelText.text = checkApiData(data: foodData.nutrCont4)
         
         return cell
     }
