@@ -12,6 +12,8 @@
 		5743C3632914126D00050C16 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3622914126D00050C16 /* SearchViewController.swift */; };
 		5743C3652914165E00050C16 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3642914165E00050C16 /* SearchListCell.swift */; };
 		5743C367291417AB00050C16 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C366291417AB00050C16 /* FoodData.swift */; };
+		5747CB7A291CB9A500838BE2 /* PlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747CB78291CB9A500838BE2 /* PlusCell.swift */; };
+		5747CB7B291CB9A500838BE2 /* PlusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5747CB79291CB9A500838BE2 /* PlusCell.xib */; };
 		579FC7782912A7020024BBBF /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7772912A7020024BBBF /* MenuCell.swift */; };
 		579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7792912BDCF0024BBBF /* DetailViewController.swift */; };
 		57DB057C290FF218008FFD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB057B290FF218008FFD65 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 		5743C3622914126D00050C16 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5743C3642914165E00050C16 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 		5743C366291417AB00050C16 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
+		5747CB78291CB9A500838BE2 /* PlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCell.swift; sourceTree = "<group>"; };
+		5747CB79291CB9A500838BE2 /* PlusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlusCell.xib; sourceTree = "<group>"; };
 		579FC7772912A7020024BBBF /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		579FC7792912BDCF0024BBBF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57DB0578290FF218008FFD65 /* BoSS_CAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS_CAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,11 +50,11 @@
 		57DB0592290FF386008FFD65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoSS_CAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.release.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.release.xcconfig"; sourceTree = "<group>"; };
-		C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.debug.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.debug.xcconfig"; sourceTree = "<group>"; };
-		F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BF952C3A2914CFAA009753BA /* CalcBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBViewController.swift; sourceTree = "<group>"; };
 		BF952C3C2914CFB3009753BA /* CalcCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCViewController.swift; sourceTree = "<group>"; };
 		BFEDCBAA2914CDC400778789 /* CalcAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcAViewController.swift; sourceTree = "<group>"; };
+		C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.debug.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.debug.xcconfig"; sourceTree = "<group>"; };
+		F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				5743C3642914165E00050C16 /* SearchListCell.swift */,
 				573A45682918B6FC002A6583 /* FoodListCell.swift */,
 				573A45692918B6FC002A6583 /* FoodListCell.xib */,
+				5747CB78291CB9A500838BE2 /* PlusCell.swift */,
+				5747CB79291CB9A500838BE2 /* PlusCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				573A456B2918B6FC002A6583 /* FoodListCell.xib in Resources */,
 				57DB0585290FF219008FFD65 /* Assets.xcassets in Resources */,
 				57DB0583290FF218008FFD65 /* Main.storyboard in Resources */,
+				5747CB7B291CB9A500838BE2 /* PlusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +284,7 @@
 				57DB057C290FF218008FFD65 /* AppDelegate.swift in Sources */,
 				579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */,
 				BF952C3D2914CFB3009753BA /* CalcCViewController.swift in Sources */,
+				5747CB7A291CB9A500838BE2 /* PlusCell.swift in Sources */,
 				57DB057E290FF218008FFD65 /* SceneDelegate.swift in Sources */,
 				57DB0593290FF386008FFD65 /* MainViewController.swift in Sources */,
 			);
