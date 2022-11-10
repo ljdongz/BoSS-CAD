@@ -56,12 +56,12 @@ class CalcAViewController: UIViewController, UITextFieldDelegate {
         
         view1.clipsToBounds = true
         view1.layer.cornerRadius = 10
-        view1.layer.borderWidth = 2.5
+        view1.layer.borderWidth = 2
         view1.layer.borderColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
                
         view2.clipsToBounds = true
         view2.layer.cornerRadius = 10
-        view2.layer.borderWidth = 1.5
+        view2.layer.borderWidth = 2
         view2.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         ageTextField.clipsToBounds = true
