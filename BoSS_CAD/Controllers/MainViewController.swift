@@ -70,9 +70,29 @@ extension MainViewController: UITableViewDataSource {
 }
 
 extension MainViewController: UITableViewDelegate {
+    // 셀 클릭 시 이벤트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(mealTimeArray.count == indexPath.row) {
             print("plus")
+            
+            let alert = UIAlertController(title: "title",message: nil , preferredStyle: .alert)
+            alert.addTextField { field in
+                // textField 설정
+            }
+            
+            let create = UIAlertAction(title: "생성", style: .default) { action in
+                if let textField = alert.textFields?[0].text {
+                    self.mealTimeArray.append(textField)
+                    tableView.insertRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .bottom)
+                }
+            }
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            
+            alert.addAction(create)
+            alert.addAction(cancel)
+            
+            self.present(alert, animated: true)
+            
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
@@ -81,5 +101,15 @@ extension MainViewController: UITableViewDelegate {
             navigationController?.pushViewController(detailVC, animated: true)
         }
         
+    }
+    
+    // 셀 스와이프 시 이벤트
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            mealTimeArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .top)
+        } else if editingStyle == .insert {
+            print("insert")
+        }
     }
 }
