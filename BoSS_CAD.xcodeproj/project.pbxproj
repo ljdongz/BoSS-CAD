@@ -24,6 +24,7 @@
 		5F13E3710F542BF5AC3CB4F2 /* Pods_BoSS_CAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */; };
 		BF952C3B2914CFAA009753BA /* CalcBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF952C3A2914CFAA009753BA /* CalcBViewController.swift */; };
 		BF952C3D2914CFB3009753BA /* CalcCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF952C3C2914CFB3009753BA /* CalcCViewController.swift */; };
+		BFEA6C51291DEB7F0097F169 /* CalculateUserKcal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA6C50291DEB7F0097F169 /* CalculateUserKcal.swift */; };
 		BFEDCBAB2914CDC400778789 /* CalcAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDCBAA2914CDC400778789 /* CalcAViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +47,12 @@
 		57DB0592290FF386008FFD65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoSS_CAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.release.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.release.xcconfig"; sourceTree = "<group>"; };
-		C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.debug.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.debug.xcconfig"; sourceTree = "<group>"; };
-		F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BF952C3A2914CFAA009753BA /* CalcBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBViewController.swift; sourceTree = "<group>"; };
 		BF952C3C2914CFB3009753BA /* CalcCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcCViewController.swift; sourceTree = "<group>"; };
+		BFEA6C50291DEB7F0097F169 /* CalculateUserKcal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateUserKcal.swift; sourceTree = "<group>"; };
 		BFEDCBAA2914CDC400778789 /* CalcAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcAViewController.swift; sourceTree = "<group>"; };
+		C8625A98E7CFE9D764E58AC6 /* Pods-BoSS_CAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.debug.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.debug.xcconfig"; sourceTree = "<group>"; };
+		F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				BFEDCBAA2914CDC400778789 /* CalcAViewController.swift */,
 				BF952C3A2914CFAA009753BA /* CalcBViewController.swift */,
 				BF952C3C2914CFB3009753BA /* CalcCViewController.swift */,
+				BFEA6C50291DEB7F0097F169 /* CalculateUserKcal.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEA6C51291DEB7F0097F169 /* CalculateUserKcal.swift in Sources */,
 				57DB0580290FF218008FFD65 /* ViewController.swift in Sources */,
 				573A456A2918B6FC002A6583 /* FoodListCell.swift in Sources */,
 				5743C3652914165E00050C16 /* SearchListCell.swift in Sources */,
