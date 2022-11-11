@@ -34,12 +34,6 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func addCellButtonTapped(_ sender: UIButton) {
-        mealTimeArray.append("아침")
-        tableView.reloadData()
-    }
-    
-    
     @IBAction func calcButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let calcAVC = storyboard.instantiateViewController(withIdentifier:
