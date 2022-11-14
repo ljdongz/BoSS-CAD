@@ -11,28 +11,28 @@ func calBMR (gender : String, age : Int, height : Int, weight : Int ) -> Int {
     
     if (gender == "남성") {
         // hbBmr = 88.4 + (13.4 * weight) + (4.8 * height) - (5.68 * age)
-        var a : Double = 88.4 + (13.4 * Double(weight))
-        var b : Double = a + (4.8 * Double(height))
-        var c : Double = b - (5.68 * Double(age))
+        let a : Double = 88.4 + (13.4 * Double(weight))
+        let b : Double = a + (4.8 * Double(height))
+        let c : Double = b - (5.68 * Double(age))
         hbBmr = c
         
         // mjBmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
-        var x : Double = (10 * Double(weight)) + (6.25 * Double(height))
-        var y : Double = x - (5 * Double(age))
-        var z : Double = y + 5
+        let x : Double = (10 * Double(weight)) + (6.25 * Double(height))
+        let y : Double = x - (5 * Double(age))
+        let z : Double = y + 5
         mjBmr = z
     }
     else if (gender == "여성") {
         // hbBmr = 447.6 + (9.25 * weight) + (3.1 * height) - (4.33 * age)
-        var a : Double = 447.6 + (9.25 * Double(weight))
-        var b : Double = a + (3.1 * Double(height))
-        var c : Double = b - (4.33 * Double(age))
+        let a : Double = 447.6 + (9.25 * Double(weight))
+        let b : Double = a + (3.1 * Double(height))
+        let c : Double = b - (4.33 * Double(age))
         hbBmr = c
 
         // mjBmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
-        var x : Double = (10 * Double(weight)) + (6.25 * Double(height))
-        var y : Double = x - (5 * Double(age))
-        var z : Double = y - 161
+        let x : Double = (10 * Double(weight)) + (6.25 * Double(height))
+        let y : Double = x - (5 * Double(age))
+        let z : Double = y - 161
         mjBmr = z
     }
     
@@ -74,8 +74,8 @@ func calRatio (dmr : Int) -> (carbs : Int, protein : Int, fat : Int) {
     return (carbs, protein, fat)
 }
 
-var testBMR = calBMR(gender: "남성", age: 22, height: 178, weight: 78)
-var testDMR = calDMR(bmr: testBMR, choice: 3)
-var testRMR = calRMR(dmr: testDMR, goalDay: 30, goalDecreaseFat: 3)
-var testRATIO = calRatio(dmr: testRMR)
+//var testBMR = calBMR(gender: "남성", age: 22, height: 178, weight: 78)
+//var testDMR = calDMR(bmr: testBMR, choice: 3)
+//var testRMR = calRMR(dmr: testDMR, goalDay: 30, goalDecreaseFat: 3)
+//var testRATIO = calRatio(dmr: testRMR)
 

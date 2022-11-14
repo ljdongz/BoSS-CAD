@@ -178,6 +178,7 @@
                     <navigationItem key="navigationItem" id="R4j-Pg-zWr"/>
                     <connections>
                         <outlet property="tableView" destination="PGQ-BR-5F1" id="FFu-Ts-vEC"/>
+                        <outlet property="userKcal" destination="7lq-yW-rP6" id="sAj-Xh-hJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02Q-Lh-VIS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -447,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqB-hp-WWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3988" y="-709"/>
+            <point key="canvasLocation" x="3987.6923076923076" y="-709.47867298578194"/>
         </scene>
         <!--CalcC View Controller-->
         <scene sceneID="RYB-GA-Bdb">

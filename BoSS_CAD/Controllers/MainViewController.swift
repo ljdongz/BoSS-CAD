@@ -10,7 +10,9 @@ import UIKit
 class MainViewController: UIViewController {
     
     var mealTimeArray: [String] = []
+    var userKcalvalue = "0"
     
+    @IBOutlet weak var userKcal: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,6 +23,11 @@ class MainViewController: UIViewController {
         setupTableView()
         setupNavigationBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        userKcal.text = userKcalvalue + "Kcal"
+    }
+    
     
     func setupTableView() {
         tableView.dataSource = self
