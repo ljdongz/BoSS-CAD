@@ -10,12 +10,30 @@ func calBMR (gender : String, age : Int, height : Int, weight : Int ) -> Int {
     var avgBmr : Double = 0.0 // 평균 BMR
     
     if (gender == "남성") {
-        hbBmr = 88.4 + (13.4 * weight) + (4.8 * height) - (5.68 * age)
-        mjBmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
+        // hbBmr = 88.4 + (13.4 * weight) + (4.8 * height) - (5.68 * age)
+        var a : Double = 88.4 + (13.4 * Double(weight))
+        var b : Double = a + (4.8 * Double(height))
+        var c : Double = b - (5.68 * Double(age))
+        hbBmr = c
+        
+        // mjBmr = (10 * weight) + (6.25 * height) - (5 * age) + 5
+        var x : Double = (10 * Double(weight)) + (6.25 * Double(height))
+        var y : Double = x - (5 * Double(age))
+        var z : Double = y + 5
+        mjBmr = z
     }
     else if (gender == "여성") {
-        hbBmr = 447.6 + (9.25 * weight) + (3.1 * height) - (4.33 * age)
-        mjBmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
+        // hbBmr = 447.6 + (9.25 * weight) + (3.1 * height) - (4.33 * age)
+        var a : Double = 447.6 + (9.25 * Double(weight))
+        var b : Double = a + (3.1 * Double(height))
+        var c : Double = b - (4.33 * Double(age))
+        hbBmr = c
+
+        // mjBmr = (10 * weight) + (6.25 * height) - (5 * age) - 161
+        var x : Double = (10 * Double(weight)) + (6.25 * Double(height))
+        var y : Double = x - (5 * Double(age))
+        var z : Double = y - 161
+        mjBmr = z
     }
     
     avgBmr = (hbBmr + mjBmr) / 2 // 평균값 계산
@@ -27,7 +45,7 @@ func calBMR (gender : String, age : Int, height : Int, weight : Int ) -> Int {
 func calDMR (bmr : Int, choice : Int) -> Int {
     
     var dmr : Double = 0.0
-    var useBmr : Double = Double(bmr)
+    let useBmr : Double = Double(bmr)
     
     switch choice {
     case 1 : dmr = useBmr * 1.2 // 거의 운동하지 않음: 기초대사량 × 1.2
@@ -42,16 +60,16 @@ func calDMR (bmr : Int, choice : Int) -> Int {
 
 // 권장 섭취 열량 계산 함수
 func calRMR (dmr : Int, goalDay : Int, goalDecreaseFat : Double) -> Int {
-    var rmr : Int = dmr - Int((goalDecreaseFat * 7800) / Double(goalDay))
+    let rmr : Int = dmr - Int((goalDecreaseFat * 7800) / Double(goalDay))
     return rmr
 }
 
 //  탄수화물, 단백질, 지방 5:3:2 비율 계산 및 양(g) 계산
 func calRatio (dmr : Int) -> (carbs : Int, protein : Int, fat : Int) {
 
-    var carbs : Int = ((dmr / 10) * 5 ) / 4
-    var protein = ((dmr / 10) * 3 ) / 4
-    var fat = ((dmr / 10) * 2 ) / 9
+    let carbs : Int = ((dmr / 10) * 5 ) / 4
+    let protein = ((dmr / 10) * 3 ) / 4
+    let fat = ((dmr / 10) * 2 ) / 9
     
     return (carbs, protein, fat)
 }
