@@ -98,11 +98,11 @@ class CalcAViewController: UIViewController, UITextFieldDelegate {
         // 나이, 키, 몸무게 값을 모두 입력받았다면 화면이동
         if (0 < age) && (0 < height) && (0 < weight) {
             
-            // calBMR (gender : self.selectedGender, age : self.age, height : self.height, weight : self.weight )
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let calcBVC = storyboard.instantiateViewController(withIdentifier:
                 "CalcBVC") as! CalcBViewController
+            calcBVC.userBMR =  calBMR (gender : self.selectedGender, age : self.age, height : self.height, weight : self.weight )
             navigationController?.pushViewController(calcBVC, animated: true)
             
         } else {return}

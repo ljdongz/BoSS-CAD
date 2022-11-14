@@ -14,6 +14,7 @@ class CalcBViewController: UIViewController {
     @IBOutlet weak var choiceLabel5: UILabel!
     
     var selectedChoice : Int = 3
+    var userBMR : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +87,7 @@ class CalcBViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let calcCVC = storyboard.instantiateViewController(withIdentifier:
             "CalcCVC") as! CalcCViewController
+        calcCVC.userDMR = calDMR (bmr : userBMR, choice : selectedChoice)
         navigationController?.pushViewController(calcCVC, animated: true)
     }
     

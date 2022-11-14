@@ -16,6 +16,8 @@ class CalcCViewController: UIViewController {
     
     var goalWeek : Int = 4
     var goalDecrease : Int = 1
+    var userDMR : Int = 0
+    var userRMR : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,15 @@ class CalcCViewController: UIViewController {
     
     
     @IBAction func returnButtonTapped(_ sender: UIButton) {
+        userRMR = calRMR (dmr : userDMR, goalDay : goalWeek, goalDecreaseFat : Double(goalDecrease))
+        var nutriRatio = calRatio (dmr : userRMR)
+        
+        let index = navigationController!.viewControllers.count - 4
+        
+        let vc = navigationController?.viewControllers[index] as! MainViewController
+        
+        vc.userKcalvalue = String(userRMR)
+        
         navigationController?.popToRootViewController(animated: true)
     }
     
