@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		573A456A2918B6FC002A6583 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573A45682918B6FC002A6583 /* FoodListCell.swift */; };
 		573A456B2918B6FC002A6583 /* FoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573A45692918B6FC002A6583 /* FoodListCell.xib */; };
+		573B257C29237EEA003C3429 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 573B257B29237EEA003C3429 /* GoogleService-Info.plist */; };
 		5743C3632914126D00050C16 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3622914126D00050C16 /* SearchViewController.swift */; };
 		5743C3652914165E00050C16 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C3642914165E00050C16 /* SearchListCell.swift */; };
 		5743C367291417AB00050C16 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C366291417AB00050C16 /* FoodData.swift */; };
@@ -16,7 +17,6 @@
 		5747CB7B291CB9A500838BE2 /* PlusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5747CB79291CB9A500838BE2 /* PlusCell.xib */; };
 		579FC7782912A7020024BBBF /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7772912A7020024BBBF /* MenuCell.swift */; };
 		579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7792912BDCF0024BBBF /* DetailViewController.swift */; };
-		57CAA29329224EAD00639B0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57CAA29229224EAD00639B0E /* GoogleService-Info.plist */; };
 		57CAA29629224FAA00639B0E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57CAA29529224FAA00639B0E /* FirebaseAuth */; };
 		57CAA29829224FAA00639B0E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57CAA29729224FAA00639B0E /* FirebaseDatabase */; };
 		57CAA29A29224FAA00639B0E /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57CAA29929224FAA00639B0E /* FirebaseDatabaseSwift */; };
@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		573A45682918B6FC002A6583 /* FoodListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		573A45692918B6FC002A6583 /* FoodListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListCell.xib; sourceTree = "<group>"; };
+		573B257B29237EEA003C3429 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5743C3622914126D00050C16 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5743C3642914165E00050C16 /* SearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 		5743C366291417AB00050C16 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		5747CB79291CB9A500838BE2 /* PlusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlusCell.xib; sourceTree = "<group>"; };
 		579FC7772912A7020024BBBF /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		579FC7792912BDCF0024BBBF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		57CAA29229224EAD00639B0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57DB0578290FF218008FFD65 /* BoSS_CAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS_CAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DB057B290FF218008FFD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57DB057D290FF218008FFD65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				57DB0581290FF218008FFD65 /* Main.storyboard */,
 				57DB0584290FF219008FFD65 /* Assets.xcassets */,
 				57DB0586290FF219008FFD65 /* LaunchScreen.storyboard */,
-				57CAA29229224EAD00639B0E /* GoogleService-Info.plist */,
+				573B257B29237EEA003C3429 /* GoogleService-Info.plist */,
 				57DB0589290FF219008FFD65 /* Info.plist */,
 				F2C1FD1C29179B0D00B9E3C6 /* Config.xcconfig */,
 			);
@@ -247,7 +247,7 @@
 				57DB0585290FF219008FFD65 /* Assets.xcassets in Resources */,
 				57DB0583290FF218008FFD65 /* Main.storyboard in Resources */,
 				5747CB7B291CB9A500838BE2 /* PlusCell.xib in Resources */,
-				57CAA29329224EAD00639B0E /* GoogleService-Info.plist in Resources */,
+				573B257C29237EEA003C3429 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
