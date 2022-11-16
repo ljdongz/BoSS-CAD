@@ -59,7 +59,11 @@ class CalcCViewController: UIViewController {
     
     
     @IBAction func returnButtonTapped(_ sender: UIButton) {
-        userRMR = calRMR (dmr : userDMR, goalDay : (7 * goalWeek), goalDecreaseFat : Double(goalDecrease))
+        userRMR = calRMR (dmr : userDMR, goalDay : (goalWeek * 7), goalDecreaseFat : Double(goalDecrease))
+        
+//        print(userDMR)
+//        print(userRMR)
+       
         var nutriRatio = calRatio (dmr : userRMR)
         
         let index = navigationController!.viewControllers.count - 4
