@@ -8,7 +8,7 @@
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKCommon
-
+import FirebaseCore
 
 
 @main
@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         KakaoSDK.initSDK(appKey: nativeAppKey as! String)
 
+        FirebaseApp.configure()
+        
         return true
     }
 

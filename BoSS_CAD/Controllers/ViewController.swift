@@ -7,6 +7,7 @@
 
 import UIKit
 import KakaoSDKUser
+import FirebaseFirestore
 
 class ViewController: UIViewController {
 

@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>316834813838-n1beqfa8dd1tn3gh0luhmdph9vqavjme.apps.googleusercontent.com</string>
+	<string>915311849543-abnn418ruhsppm19laqbloebmsghpajk.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.316834813838-n1beqfa8dd1tn3gh0luhmdph9vqavjme</string>
+	<string>com.googleusercontent.apps.915311849543-abnn418ruhsppm19laqbloebmsghpajk</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBFP2INIRHBKlk7s03dwIzQGE39RpML7qk</string>
+	<string>AIzaSyCstcDx2ITgLGkVi5MMjQnoPdI9GA0vZmo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>316834813838</string>
+	<string>915311849543</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>kr.ac.tukorea.ce.ios.Boss-Kcalculator</string>
+	<string>kr.ac.tukorea.ce.ios.BoSS-CAD</string>
 	<key>PROJECT_ID</key>
-	<string>boss-kcal</string>
+	<string>boss-cad-d5cdc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>boss-kcal.appspot.com</string>
+	<string>boss-cad-d5cdc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:316834813838:ios:483b24685ce6b24b59f6df</string>
+	<string>1:915311849543:ios:f97e039dfb6e578f838162</string>
 </dict>
 </plist>
