@@ -88,6 +88,8 @@ class CalcBViewController: UIViewController {
         let calcCVC = storyboard.instantiateViewController(withIdentifier:
             "CalcCVC") as! CalcCViewController
         calcCVC.userDMR = calDMR (bmr : userBMR, choice : selectedChoice)
+        
+//        print(userBMR)
         navigationController?.pushViewController(calcCVC, animated: true)
     }
     

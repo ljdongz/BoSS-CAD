@@ -60,7 +60,7 @@ func calDMR (bmr : Int, choice : Int) -> Int {
 
 // 권장 섭취 열량 계산 함수
 func calRMR (dmr : Int, goalDay : Int, goalDecreaseFat : Double) -> Int {
-    let rmr : Int = dmr - Int((goalDecreaseFat * 7800) / Double(goalDay))
+    let rmr : Int = (dmr - Int((goalDecreaseFat * 7800) / Double(goalDay)))
     return rmr
 }
 
