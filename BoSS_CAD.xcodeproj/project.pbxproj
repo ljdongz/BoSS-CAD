@@ -29,6 +29,7 @@
 		57DB0585290FF219008FFD65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB0584290FF219008FFD65 /* Assets.xcassets */; };
 		57DB0588290FF219008FFD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DB0586290FF219008FFD65 /* LaunchScreen.storyboard */; };
 		57DB0593290FF386008FFD65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB0592290FF386008FFD65 /* MainViewController.swift */; };
+		57E0D1802925F9C8003C53B4 /* RealTimeDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0D17F2925F9C8003C53B4 /* RealTimeDBManager.swift */; };
 		5F13E3710F542BF5AC3CB4F2 /* Pods_BoSS_CAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */; };
 		BF952C3B2914CFAA009753BA /* CalcBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF952C3A2914CFAA009753BA /* CalcBViewController.swift */; };
 		BF952C3D2914CFB3009753BA /* CalcCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF952C3C2914CFB3009753BA /* CalcCViewController.swift */; };
@@ -56,6 +57,7 @@
 		57DB0587290FF219008FFD65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57DB0589290FF219008FFD65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57DB0592290FF386008FFD65 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		57E0D17F2925F9C8003C53B4 /* RealTimeDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeDBManager.swift; sourceTree = "<group>"; };
 		B1CC793600E4E5CFCD45BA05 /* Pods_BoSS_CAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoSS_CAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF917754FA8F6409B6E2638D /* Pods-BoSS_CAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoSS_CAD.release.xcconfig"; path = "Target Support Files/Pods-BoSS_CAD/Pods-BoSS_CAD.release.xcconfig"; sourceTree = "<group>"; };
 		BF952C3A2914CFAA009753BA /* CalcBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5743C366291417AB00050C16 /* FoodData.swift */,
+				57E0D17F2925F9C8003C53B4 /* RealTimeDBManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				5743C3652914165E00050C16 /* SearchListCell.swift in Sources */,
 				5743C3632914126D00050C16 /* SearchViewController.swift in Sources */,
 				5743C367291417AB00050C16 /* FoodData.swift in Sources */,
+				57E0D1802925F9C8003C53B4 /* RealTimeDBManager.swift in Sources */,
 				579FC7782912A7020024BBBF /* MenuCell.swift in Sources */,
 				BF952C3B2914CFAA009753BA /* CalcBViewController.swift in Sources */,
 				BFEDCBAB2914CDC400778789 /* CalcAViewController.swift in Sources */,

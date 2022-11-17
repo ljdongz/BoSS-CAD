@@ -7,13 +7,16 @@
 
 import UIKit
 import KakaoSDKUser
-import FirebaseFirestore
+
+import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
 
     
@@ -48,7 +51,11 @@ class ViewController: UIViewController {
                             
                             //do something
                             _ = user // 사용자 정보 출력 (동의한 것만)
-                            print("사용자 정보  = \(String(describing: user!.id!))")
+                            
+                            let userId = String(describing: user!.id!)
+                            print("사용자 정보  = \(userId)")
+                            RealTimeDBManager.shared.userChecking(userId: userId)
+                            
                             
                             // 파이어베이스에 사용자 데이터 불러온 후 탈출 클로저로 화면 전환하기
                             let storyboard = UIStoryboard(name: "Main", bundle: .main)
