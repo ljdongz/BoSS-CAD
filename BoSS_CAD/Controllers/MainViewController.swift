@@ -26,7 +26,27 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        userKcal.text = userKcalvalue + "Kcal"
+        // 사용자의 칼로리를 가져옴
+        RealTimeDBManager.shared.ref.child("users/\(userId!)/kcal").getData { error, snapshot in
+            guard error == nil else {
+                print(error?.localizedDescription)
+                return
+            }
+            
+            self.userKcalvalue = snapshot?.value as? String ?? ""
+            self.userKcal.text = self.userKcalvalue + " Kcal"
+        }
+        
+        // 사용자의 식단 리스트를 가져옴
+        
+        RealTimeDBManager.shared.ref.child("users/\(userId)/diets").getData { error, snapshot in
+            guard error == nil else {
+                print(error?.localizedDescription)
+                return
+            }
+
+            print(snapshot?.value)
+        }
     }
     
     
@@ -88,6 +108,8 @@ extension MainViewController: UITableViewDelegate {
                 if let textField = alert.textFields?[0].text {
                     self.mealTimeArray.append(textField)
                     tableView.insertRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .bottom)
+                    
+//                    RealTimeDBManager.shared.ref.child("users/\(self.userId!)/diets").setValue("\(textField)")
                 }
             }
             let cancel = UIAlertAction(title: "취소", style: .cancel)
@@ -112,6 +134,7 @@ extension MainViewController: UITableViewDelegate {
         if editingStyle == .delete {
             mealTimeArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .top)
+            
         } else if editingStyle == .insert {
             print("insert")
         }
