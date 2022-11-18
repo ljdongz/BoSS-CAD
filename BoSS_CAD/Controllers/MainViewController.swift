@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     
     var mealTimeArray: [String] = []
     var userKcalvalue = "0"
+    var userId: String?
     
     @IBOutlet weak var userKcal: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +19,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = ""
+        title = userId
 
         setupTableView()
         setupNavigationBar()
@@ -38,6 +39,8 @@ class MainViewController: UIViewController {
     
     func setupNavigationBar() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     

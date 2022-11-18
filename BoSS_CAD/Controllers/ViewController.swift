@@ -59,10 +59,12 @@ class ViewController: UIViewController {
                             
                             // 파이어베이스에 사용자 데이터 불러온 후 탈출 클로저로 화면 전환하기
                             let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainNavVC")
+                            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
                             
                             mainViewController.modalPresentationStyle = .fullScreen
-                            self.present(mainViewController, animated: false)
+                            mainViewController.userId = userId
+                            
+                            self.navigationController?.pushViewController(mainViewController, animated: false)
                         }
                     }
                     //do something
@@ -75,10 +77,14 @@ class ViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainNavVC")
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+        
         
         mainViewController.modalPresentationStyle = .fullScreen
-        present(mainViewController, animated: true)
+        mainViewController.userId = "1"
+        
+        //present(mainViewController, animated: true)
+        navigationController?.pushViewController(mainViewController, animated: false)
         
     }
     

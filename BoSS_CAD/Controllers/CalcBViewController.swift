@@ -56,6 +56,7 @@ class CalcBViewController: UIViewController {
         choiceLabel5.layer.cornerRadius = 10
         choiceLabel5.layer.borderWidth = 2.5
         choiceLabel5.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
     }
     
     
