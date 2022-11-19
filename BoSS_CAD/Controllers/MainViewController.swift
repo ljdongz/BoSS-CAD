@@ -109,7 +109,7 @@ extension MainViewController: UITableViewDelegate {
                     self.mealTimeArray.append(textField)
                     tableView.insertRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .bottom)
                     
-//                    RealTimeDBManager.shared.ref.child("users/\(self.userId!)/diets").setValue("\(textField)")
+                    RealTimeDBManager.shared.ref.child("users/\(self.userId!)/diets/\(textField)").setValue("")
                 }
             }
             let cancel = UIAlertAction(title: "취소", style: .cancel)
