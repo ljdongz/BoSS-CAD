@@ -7,7 +7,8 @@
 
 import UIKit
 import KakaoSDKUser
-
+import KakaoSDKAuth
+import KakaoSDKCommon
 import Firebase
 import FirebaseDatabase
 
@@ -18,7 +19,50 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
 
+            // 로그인 정보가 남아있으면 데이터 불러오고 화면 전환
+            if (AuthApi.hasToken()) {
+                UserApi.shared.accessTokenInfo { (_, error) in
+                    if let error = error {
+                        if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
+                            //로그인 필요
+                        }
+                        else {
+                            //기타 에러
+                        }
+                    }
+                    else {
+                        //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
+                        UserApi.shared.me() {(user,error) in
+                            if let error = error {
+                                print(error)
+                            }
+                            else{
+                                print("success")
+                                let userId = String(describing: user!.id!)
+                                print("사용자 정보  = \(userId)")
+                                RealTimeDBManager.shared.userChecking(userId: userId)
+                                
+                                
+                                // 파이어베이스에 사용자 데이터 불러온 후 탈출 클로저로 화면 전환하기
+                                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                                let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+                                
+                                mainViewController.modalPresentationStyle = .fullScreen
+                                mainViewController.userId = userId
+                                
+                                self.navigationController?.pushViewController(mainViewController, animated: false)
+                            }
+                        }
+                    }
+                }
+            }
+            else {
+                //로그인 필요
+            }
+        }
     
     @IBAction func kakaoLoginButtonTouchUpInside(_ sender: UIButton) {
         // 카카오톡 설치 여부 확인
