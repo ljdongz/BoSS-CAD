@@ -74,6 +74,19 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func logoutTestButton(_ sender: UIButton) {//로그아웃 버튼
+        UserApi.shared.logout{(error) in
+            if let error = error {
+            print(error)
+        }
+            else{
+                print("로그아웃 성공")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
