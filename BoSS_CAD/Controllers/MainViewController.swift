@@ -61,6 +61,8 @@ class MainViewController: UIViewController {
             for (mealTime, foods) in diets {
                 self.mealTimeArray.append(String(describing: mealTime))
                 
+                if String(describing: foods) == "" { continue }
+                
                 for (name, nutrient) in foods as! NSDictionary {
                     for (key, value) in nutrient as! NSDictionary {
                         
