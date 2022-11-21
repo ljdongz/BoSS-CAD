@@ -8,5 +8,6 @@
 import Foundation
 
 struct DBData {
-    var diets: [String: Any]
+    var diets: [String: [Row]]
+    var kcal: String
 }

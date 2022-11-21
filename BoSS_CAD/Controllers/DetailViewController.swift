@@ -11,6 +11,8 @@ class DetailViewController: UIViewController {
     
     var mealTimeText: String?
     var foodList: [Row] = []
+    var appendedFood: [Row]?
+    var userId: String?
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -37,6 +39,16 @@ class DetailViewController: UIViewController {
         print(foodList)
         updateTotalInfo()
         tableView.reloadData()
+        
+        for food in appendedFood ?? [] {
+            RealTimeDBManager.shared.ref.child("users/\(userId!)/diets/\(mealTimeText!)/\(food.descKor)").setValue([
+                "kcal" : food.nutrCont1,
+                "carbo" : food.nutrCont2,
+                "protein" : food.nutrCont3,
+                "fat" : food.nutrCont4,
+                "size" : food.servingSize
+            ])
+        }
     }
     
     func setupTableView() {
@@ -67,6 +79,7 @@ class DetailViewController: UIViewController {
     @objc func barButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let searchVC = storyboard.instantiateViewController(withIdentifier: "searchVC") as! SearchViewController
+        
         navigationController?.pushViewController(searchVC, animated: true)
     }
 
@@ -92,6 +105,4 @@ extension DetailViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
