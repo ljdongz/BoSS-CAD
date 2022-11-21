@@ -13,11 +13,11 @@ import Firebase
 import FirebaseDatabase
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -35,27 +35,7 @@ class ViewController: UIViewController {
                 }
                 else {
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-                    UserApi.shared.me() {(user,error) in
-                        if let error = error {
-                            print(error)
-                        }
-                        else{
-                            print("success")
-                            let userId = String(describing: user!.id!)
-                            print("사용자 정보  = \(userId)")
-                            RealTimeDBManager.shared.userChecking(userId: userId)
-                            
-                            
-                            // 파이어베이스에 사용자 데이터 불러온 후 탈출 클로저로 화면 전환하기
-                            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
-                            
-                            mainViewController.modalPresentationStyle = .fullScreen
-                            mainViewController.userId = userId
-                            
-                            self.navigationController?.pushViewController(mainViewController, animated: false)
-                        }
-                    }
+                    self.setUserInfo()
                 }
             }
         }
@@ -86,39 +66,11 @@ class ViewController: UIViewController {
                 }
                 else {
                     print("loginWithKakaoAccount() success.")
-                    UserApi.shared.me() {(user, error) in
-                        if let error = error {
-                            print(error)
-                        }
-                        else {
-                            print("me() success.")
-                            
-                            //do something
-                            _ = user // 사용자 정보 출력 (동의한 것만)
-                            
-                            let userId = String(describing: user!.id!)
-                            print("사용자 정보  = \(userId)")
-                            RealTimeDBManager.shared.userChecking(userId: userId)
-                            
-                            
-                            // 파이어베이스에 사용자 데이터 불러온 후 탈출 클로저로 화면 전환하기
-                            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                            let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
-                            
-                            mainViewController.modalPresentationStyle = .fullScreen
-                            mainViewController.userId = userId
-                            
-                            self.navigationController?.pushViewController(mainViewController, animated: false)
-                        }
-                    }
-                    //do something
-                    _ = oauthToken
+                    self.setUserInfo()
                 }
             }
         }
     }
-    
-    
     @IBAction func logoutTestButton(_ sender: UIButton) {//로그아웃 버튼
         UserApi.shared.logout{(error) in
             if let error = error {
@@ -145,5 +97,36 @@ class ViewController: UIViewController {
         
     }
     
+    
 }
-
+extension ViewController{
+    private func setUserInfo(){ // 사용자 정보 출력 및 화면 전환 함수
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("me() success.")
+                
+                //do something
+                _ = user // 사용자 정보 출력 (동의한 것만)
+                
+                let userId = String(describing: user!.id!)
+                print("사용자 정보  = \(userId)")
+                RealTimeDBManager.shared.userChecking(userId: userId)
+                
+                
+                // 파이어베이스에 사용자 데이터 불러온 후 탈출 클로저로 화면 전환하기
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+                
+                mainViewController.modalPresentationStyle = .fullScreen
+                mainViewController.userId = userId
+                
+                self.navigationController?.pushViewController(mainViewController, animated: false)
+            }
+        }
+        //do something
+        //        _ = oauthToken
+    }
+}
