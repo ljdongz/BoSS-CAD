@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
         
         // 사용자의 식단 리스트를 가져옴
         
-        RealTimeDBManager.shared.ref.child("users/\(userId)/diets").getData { error, snapshot in
+        RealTimeDBManager.shared.ref.child("users/\(userId!)/diets").getData { error, snapshot in
             guard error == nil else {
                 print(error?.localizedDescription)
                 return
@@ -109,6 +109,7 @@ extension MainViewController: UITableViewDelegate {
                     self.mealTimeArray.append(textField)
                     tableView.insertRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .bottom)
                     
+                    // DB에 식단 추가
                     RealTimeDBManager.shared.ref.child("users/\(self.userId!)/diets/\(textField)").setValue("")
                 }
             }
@@ -135,8 +136,6 @@ extension MainViewController: UITableViewDelegate {
             mealTimeArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .top)
             
-        } else if editingStyle == .insert {
-            print("insert")
         }
     }
 }
