@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KakaoSDKUser
 
 class MainViewController: UIViewController {
     
@@ -71,7 +72,17 @@ class MainViewController: UIViewController {
         navigationController?.pushViewController(calcAVC, animated: true)
     }
     
-    
+    @IBAction func logoutButton(_ sender: UIButton) {//로그아웃 버튼
+        UserApi.shared.logout{(error) in
+            if let error = error {
+                print(error)
+            }
+            else{
+                print("로그아웃 성공")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
 }
 
 extension MainViewController: UITableViewDataSource {
