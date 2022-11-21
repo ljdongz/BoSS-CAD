@@ -34,4 +34,8 @@ class RealTimeDBManager {
         }
         
     }
+    
+    func setUserKcal(userId: String, kcal: String) {
+        ref.child("users/\(userId)/kcal").setValue(kcal)
+    }
 }

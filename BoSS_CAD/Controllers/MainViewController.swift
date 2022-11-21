@@ -10,7 +10,10 @@ import KakaoSDKUser
 
 class MainViewController: UIViewController {
     
+    var dietsList: [String: [Row]] = [:]
     var mealTimeArray: [String] = []
+    var foods: [Row]?
+    
     var userKcalvalue = "0"
     var userId: String?
     
@@ -38,15 +41,56 @@ class MainViewController: UIViewController {
             self.userKcal.text = self.userKcalvalue + " Kcal"
         }
         
-        // 사용자의 식단 리스트를 가져옴
-        
-        RealTimeDBManager.shared.ref.child("users/\(userId)/diets").getData { error, snapshot in
+        // 사용자의 식단 리스트 및 식단에 포함된 음식 리스트를 가져옴
+        RealTimeDBManager.shared.ref.child("users/\(userId!)/diets").getData { error, snapshot in
             guard error == nil else {
                 print(error?.localizedDescription)
                 return
             }
 
-            print(snapshot?.value)
+            let diets = snapshot?.value as? NSDictionary ?? [:]
+            
+            var carbo: String?
+            var protein: String?
+            var fat: String?
+            var kcal: String?
+            var size: String?
+            
+            self.mealTimeArray = []
+            self.foods = []
+            
+            for (mealTime, foods) in diets {
+                self.mealTimeArray.append(String(describing: mealTime))
+                
+                if String(describing: foods) == "" { continue }
+                
+                for (name, nutrient) in foods as! NSDictionary {
+                    for (key, value) in nutrient as! NSDictionary {
+                        
+                        switch String(describing: key) {
+                        case "carbo" :
+                            carbo = String(describing: value)
+                        case "protein" :
+                            protein = String(describing: value)
+                        case "fat" :
+                            fat = String(describing: value)
+                        case "kcal" :
+                            kcal = String(describing: value)
+                        case "size" :
+                            size = String(describing: value)
+                        default:
+                            return
+                        }
+                    }
+                    
+                    self.foods?.append(Row(nutrCont1: kcal!, nutrCont2: carbo!, nutrCont3: protein!, nutrCont4: fat!, servingSize: size!, descKor: String(describing: name)))
+                }
+                self.dietsList[String(describing: mealTime)] = self.foods
+            }
+            
+            print(self.foods)
+            
+            self.tableView.reloadData()
         }
     }
     
@@ -107,7 +151,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     // 셀 클릭 시 이벤트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(mealTimeArray.count == indexPath.row) {
+        if(mealTimeArray.count == indexPath.row) { // 식단 추가 셀
             print("plus")
             
             let alert = UIAlertController(title: "title",message: nil , preferredStyle: .alert)
@@ -120,6 +164,7 @@ extension MainViewController: UITableViewDelegate {
                     self.mealTimeArray.append(textField)
                     tableView.insertRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .bottom)
                     
+                    // DB에 식단 추가
                     RealTimeDBManager.shared.ref.child("users/\(self.userId!)/diets/\(textField)").setValue("")
                 }
             }
@@ -130,11 +175,15 @@ extension MainViewController: UITableViewDelegate {
             
             self.present(alert, animated: true)
             
-        } else {
+        } else { // 식단 리스트 표시
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
             
-            detailVC.mealTimeText = mealTimeArray[indexPath.row]
+            let mealTime = mealTimeArray[indexPath.row]
+            
+            detailVC.mealTimeText = mealTime
+            detailVC.foodList = dietsList[mealTime] ?? []
+            detailVC.userId = userId
             navigationController?.pushViewController(detailVC, animated: true)
         }
         
@@ -146,8 +195,6 @@ extension MainViewController: UITableViewDelegate {
             mealTimeArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .top)
             
-        } else if editingStyle == .insert {
-            print("insert")
         }
     }
 }

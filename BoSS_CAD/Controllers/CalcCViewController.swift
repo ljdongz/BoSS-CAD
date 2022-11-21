@@ -72,7 +72,11 @@ class CalcCViewController: UIViewController {
         
         vc.userKcalvalue = String(userRMR)
         
-        navigationController?.popToRootViewController(animated: true)
+        let userId = vc.userId
+        
+        RealTimeDBManager.shared.setUserKcal(userId: userId!, kcal: String(userRMR))
+        
+        navigationController?.popToViewController(vc, animated: true)
     }
     
     

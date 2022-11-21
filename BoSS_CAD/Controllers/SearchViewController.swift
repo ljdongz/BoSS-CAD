@@ -27,10 +27,14 @@ class SearchViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
         guard let vcStack = self.navigationController?.viewControllers else { return }
         for vc in vcStack {
             if let detailView = vc as? DetailViewController {
-                detailView.foodList = self.appendedDatas
+                detailView.appendedFood = appendedDatas
+                for data in appendedDatas {
+                    detailView.foodList.append(data)
+                }
             }
         }
     }
