@@ -10,6 +10,8 @@ import UIKit
 class MainViewController: UIViewController {
     
     var mealTimeArray: [String] = []
+    var foods: [Row]?
+    
     var userKcalvalue = "0"
     var userId: String?
     
@@ -38,14 +40,52 @@ class MainViewController: UIViewController {
         }
         
         // 사용자의 식단 리스트를 가져옴
-        
         RealTimeDBManager.shared.ref.child("users/\(userId!)/diets").getData { error, snapshot in
             guard error == nil else {
                 print(error?.localizedDescription)
                 return
             }
 
-            print(snapshot?.value)
+            let diets = snapshot?.value as! NSDictionary
+            
+            var carbo: String?
+            var protein: String?
+            var fat: String?
+            var kcal: String?
+            var size: String?
+            
+            self.mealTimeArray = []
+            self.foods = []
+            
+            for (mealTime, foods) in diets {
+                self.mealTimeArray.append(String(describing: mealTime))
+                
+                for (name, nutrient) in foods as! NSDictionary {
+                    for (key, value) in nutrient as! NSDictionary {
+                        
+                        switch String(describing: key) {
+                        case "carbo" :
+                            carbo = String(describing: value)
+                        case "protein" :
+                            protein = String(describing: value)
+                        case "fat" :
+                            fat = String(describing: value)
+                        case "kcal" :
+                            kcal = String(describing: value)
+                        case "size" :
+                            size = String(describing: value)
+                        default:
+                            return
+                        }
+                    }
+                    
+                    self.foods?.append(Row(nutrCont1: kcal!, nutrCont2: carbo!, nutrCont3: protein!, nutrCont4: fat!, servingSize: size!, descKor: String(describing: name)))
+                }
+            }
+            
+            print(self.foods)
+            
+            self.tableView.reloadData()
         }
     }
     
