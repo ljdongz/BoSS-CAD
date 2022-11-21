@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
                 return
             }
 
-            let diets = snapshot?.value as! NSDictionary
+            let diets = snapshot?.value as? NSDictionary ?? [:]
             
             var carbo: String?
             var protein: String?
@@ -172,6 +172,7 @@ extension MainViewController: UITableViewDelegate {
             
             detailVC.mealTimeText = mealTime
             detailVC.foodList = dietsList[mealTime] ?? []
+            detailVC.userId = userId
             navigationController?.pushViewController(detailVC, animated: true)
         }
         
