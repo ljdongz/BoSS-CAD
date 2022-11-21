@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var dietsList: [String: [Row]] = [:]
     var mealTimeArray: [String] = []
     var foods: [Row]?
     
@@ -39,7 +40,7 @@ class MainViewController: UIViewController {
             self.userKcal.text = self.userKcalvalue + " Kcal"
         }
         
-        // 사용자의 식단 리스트를 가져옴
+        // 사용자의 식단 리스트 및 식단에 포함된 음식 리스트를 가져옴
         RealTimeDBManager.shared.ref.child("users/\(userId!)/diets").getData { error, snapshot in
             guard error == nil else {
                 print(error?.localizedDescription)
@@ -81,6 +82,7 @@ class MainViewController: UIViewController {
                     
                     self.foods?.append(Row(nutrCont1: kcal!, nutrCont2: carbo!, nutrCont3: protein!, nutrCont4: fat!, servingSize: size!, descKor: String(describing: name)))
                 }
+                self.dietsList[String(describing: mealTime)] = self.foods
             }
             
             print(self.foods)
@@ -136,7 +138,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     // 셀 클릭 시 이벤트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(mealTimeArray.count == indexPath.row) {
+        if(mealTimeArray.count == indexPath.row) { // 식단 추가 셀
             print("plus")
             
             let alert = UIAlertController(title: "title",message: nil , preferredStyle: .alert)
@@ -160,11 +162,14 @@ extension MainViewController: UITableViewDelegate {
             
             self.present(alert, animated: true)
             
-        } else {
+        } else { // 식단 리스트 표시
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
             
-            detailVC.mealTimeText = mealTimeArray[indexPath.row]
+            let mealTime = mealTimeArray[indexPath.row]
+            
+            detailVC.mealTimeText = mealTime
+            detailVC.foodList = dietsList[mealTime] ?? []
             navigationController?.pushViewController(detailVC, animated: true)
         }
         

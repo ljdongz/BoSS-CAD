@@ -15,6 +15,7 @@
 		5743C367291417AB00050C16 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743C366291417AB00050C16 /* FoodData.swift */; };
 		5747CB7A291CB9A500838BE2 /* PlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747CB78291CB9A500838BE2 /* PlusCell.swift */; };
 		5747CB7B291CB9A500838BE2 /* PlusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5747CB79291CB9A500838BE2 /* PlusCell.xib */; };
+		57846905292B685C005E75D0 /* DBData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57846904292B685C005E75D0 /* DBData.swift */; };
 		579FC7782912A7020024BBBF /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7772912A7020024BBBF /* MenuCell.swift */; };
 		579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FC7792912BDCF0024BBBF /* DetailViewController.swift */; };
 		57CAA29629224FAA00639B0E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57CAA29529224FAA00639B0E /* FirebaseAuth */; };
@@ -46,6 +47,7 @@
 		5743C366291417AB00050C16 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		5747CB78291CB9A500838BE2 /* PlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCell.swift; sourceTree = "<group>"; };
 		5747CB79291CB9A500838BE2 /* PlusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlusCell.xib; sourceTree = "<group>"; };
+		57846904292B685C005E75D0 /* DBData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBData.swift; sourceTree = "<group>"; };
 		579FC7772912A7020024BBBF /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		579FC7792912BDCF0024BBBF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57DB0578290FF218008FFD65 /* BoSS_CAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoSS_CAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 			children = (
 				5743C366291417AB00050C16 /* FoodData.swift */,
 				57E0D17F2925F9C8003C53B4 /* RealTimeDBManager.swift */,
+				57846904292B685C005E75D0 /* DBData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				BF952C3B2914CFAA009753BA /* CalcBViewController.swift in Sources */,
 				BFEDCBAB2914CDC400778789 /* CalcAViewController.swift in Sources */,
 				57DB057C290FF218008FFD65 /* AppDelegate.swift in Sources */,
+				57846905292B685C005E75D0 /* DBData.swift in Sources */,
 				579FC77A2912BDCF0024BBBF /* DetailViewController.swift in Sources */,
 				BF952C3D2914CFB3009753BA /* CalcCViewController.swift in Sources */,
 				5747CB7A291CB9A500838BE2 /* PlusCell.swift in Sources */,
