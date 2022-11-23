@@ -106,3 +106,20 @@ extension DetailViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension DetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let food = foodList[indexPath.row].descKor
+            
+            
+            foodList.remove(at: indexPath.row)
+            RealTimeDBManager.shared.ref.child("users/\(userId!)/diets/\(mealTimeText!)/\(food)").removeValue()
+            
+            
+            tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .top)
+            
+        }
+    }
+}
