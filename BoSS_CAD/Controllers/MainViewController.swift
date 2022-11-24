@@ -64,8 +64,8 @@ class MainViewController: UIViewController {
                 
                 if String(describing: foods) == "" { continue }
                 
-                for (name, nutrient) in foods as! NSDictionary {
-                    for (key, value) in nutrient as! NSDictionary {
+                for (name, nutrient) in foods as? NSDictionary ?? [:] {
+                    for (key, value) in nutrient as? NSDictionary ?? [:] {
                         
                         switch String(describing: key) {
                         case "carbo" :
