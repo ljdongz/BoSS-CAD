@@ -192,7 +192,17 @@ extension MainViewController: UITableViewDelegate {
     // 셀 스와이프 시 이벤트
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
+            let diet = mealTimeArray[indexPath.row]
+            print(diet)
+            
+            dietsList[mealTimeArray[indexPath.row]] = nil
+            
+            
             mealTimeArray.remove(at: indexPath.row)
+            RealTimeDBManager.shared.ref.child("users/\(userId!)/diets/\(diet)").removeValue()
+            
+            
             tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .top)
             
         }
