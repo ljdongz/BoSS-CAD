@@ -22,8 +22,6 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = userId
 
         setupTableView()
         setupNavigationBar()
@@ -104,28 +102,38 @@ class MainViewController: UIViewController {
     
     func setupNavigationBar() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(barButtonTapped))
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
+    @objc func barButtonTapped() {
+        let alert = UIAlertController(title: "로그아웃",message: "로그아웃을 하시겠습니까?" , preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "로그아웃", style: .default) { action in
+            UserApi.shared.logout{(error) in
+                if let error = error {
+                    print(error)
+                }
+                else{
+                    print("로그아웃 성공")
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true)
+        
+    }
     
     @IBAction func calcButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let calcAVC = storyboard.instantiateViewController(withIdentifier:
             "CalcAVC") as! CalcAViewController
         navigationController?.pushViewController(calcAVC, animated: true)
-    }
-    
-    @IBAction func logoutButton(_ sender: UIButton) {//로그아웃 버튼
-        UserApi.shared.logout{(error) in
-            if let error = error {
-                print(error)
-            }
-            else{
-                print("로그아웃 성공")
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
     }
 }
 
@@ -154,7 +162,7 @@ extension MainViewController: UITableViewDelegate {
         if(mealTimeArray.count == indexPath.row) { // 식단 추가 셀
             print("plus")
             
-            let alert = UIAlertController(title: "title",message: nil , preferredStyle: .alert)
+            let alert = UIAlertController(title: "식단 이름",message: nil , preferredStyle: .alert)
             alert.addTextField { field in
                 // textField 설정
             }

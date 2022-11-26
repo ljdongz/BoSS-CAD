@@ -71,31 +71,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    @IBAction func logoutTestButton(_ sender: UIButton) {//로그아웃 버튼
-        UserApi.shared.logout{(error) in
-            if let error = error {
-                print(error)
-            }
-            else{
-                print("로그아웃 성공")
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-    }
-    
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
-        
-        
-        mainViewController.modalPresentationStyle = .fullScreen
-        mainViewController.userId = "1"
-        
-        //present(mainViewController, animated: true)
-        navigationController?.pushViewController(mainViewController, animated: false)
-        
-    }
     
     
 }

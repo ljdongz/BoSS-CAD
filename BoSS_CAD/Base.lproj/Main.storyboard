@@ -17,18 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czy-qf-cGu">
-                                <rect key="frame" x="315" y="775" width="75" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="1hI-sm-s50"/>
-                                    <constraint firstAttribute="height" constant="35" id="j03-ML-gIu"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41Z-pe-Xve"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scribble" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ae4-D9-d8b" customClass="LogoImage">
                                 <rect key="frame" x="75" y="166.33333333333337" width="240" height="138.66666666666663"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
@@ -53,25 +41,14 @@
                                     <action selector="kakaoLoginButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sg-RJ-6rR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io3-aA-Y9t">
-                                <rect key="frame" x="140" y="641" width="112" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="로그아웃test"/>
-                                <connections>
-                                    <action selector="logoutTestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKC-b5-Uwa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Czy-qf-cGu" secondAttribute="trailing" id="1dZ-rf-Ngf"/>
                             <constraint firstItem="Ae4-D9-d8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="7yA-d7-B54"/>
                             <constraint firstItem="RBq-wu-zlN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="aCs-FK-Loy"/>
                             <constraint firstItem="Ae4-D9-d8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAO-6Q-by3"/>
                             <constraint firstItem="RBq-wu-zlN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fuU-Qo-1yd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Czy-qf-cGu" secondAttribute="bottom" id="mGY-jN-E0c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uHg-sn-vKt"/>
@@ -100,11 +77,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnc-Ru-rl9">
-                                        <rect key="frame" x="317" y="48" width="55" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="calc"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnc-Ru-rl9">
+                                        <rect key="frame" x="180" y="50" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="7Pd-J8-KWG"/>
+                                            <constraint firstAttribute="height" constant="30" id="LMT-qY-l1h"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" " image="pencil.line" catalog="system"/>
                                         <connections>
                                             <action selector="calcButtonTapped:" destination="I05-A6-DpH" eventType="touchUpInside" id="3Ex-gY-H6O"/>
                                         </connections>
@@ -113,9 +94,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="Dh9-7e-E79"/>
+                                    <constraint firstItem="Hnc-Ru-rl9" firstAttribute="centerY" secondItem="TU0-2E-TEU" secondAttribute="centerY" id="KW5-5m-9pj"/>
                                     <constraint firstItem="7lq-yW-rP6" firstAttribute="leading" secondItem="TU0-2E-TEU" secondAttribute="leading" constant="20" id="KZh-gd-H66"/>
                                     <constraint firstItem="7lq-yW-rP6" firstAttribute="top" secondItem="TU0-2E-TEU" secondAttribute="top" constant="25" id="Ud9-E6-SFw"/>
                                     <constraint firstAttribute="bottom" secondItem="7lq-yW-rP6" secondAttribute="bottom" constant="25" id="iHc-sS-MCL"/>
+                                    <constraint firstItem="Hnc-Ru-rl9" firstAttribute="leading" secondItem="7lq-yW-rP6" secondAttribute="trailing" constant="10" id="iXZ-7o-rtg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coa-mu-tae" userLabel="View2">
@@ -169,15 +152,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJc-AR-MWS">
-                                <rect key="frame" x="294" y="797" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="sign out"/>
-                                <connections>
-                                    <action selector="logoutButton:" destination="I05-A6-DpH" eventType="touchUpInside" id="WmN-ZF-bfy"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pXl-NZ-y5D"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -788,6 +762,7 @@
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="kakao_login_medium_wide" width="300" height="45"/>
+        <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="scribble" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

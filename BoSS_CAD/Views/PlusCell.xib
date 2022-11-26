@@ -17,13 +17,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="395" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle" catalog="system" id="YKP-RZ-p7u">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="plus.circle" catalog="system" id="YKP-RZ-p7u">
                         <rect key="frame" x="167.66666666666666" y="39.000000000000007" width="60" height="58.666666666666664"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="IYY-6k-vRr"/>
-                            <constraint firstAttribute="width" constant="60" id="pxT-7Y-3Gq"/>
+                            <constraint firstAttribute="height" constant="30" id="IYY-6k-vRr"/>
+                            <constraint firstAttribute="width" constant="30" id="pxT-7Y-3Gq"/>
                         </constraints>
                     </imageView>
                 </subviews>
