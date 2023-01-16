@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     
     var userKcalvalue = "0"
     var userId: String?
+    var message: String?
     
     @IBOutlet weak var userKcal: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -25,6 +26,7 @@ class MainViewController: UIViewController {
 
         setupTableView()
         setupNavigationBar()
+        //showAlert()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +94,15 @@ class MainViewController: UIViewController {
         }
     }
     
+    func showAlert() {
+        let alert = UIAlertController(title: "Welcome",message: message , preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "확인", style: .default)
+        
+        alert.addAction(ok)
+        
+        self.present(alert, animated: true)
+    }
     
     func setupTableView() {
         tableView.dataSource = self
